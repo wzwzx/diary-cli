@@ -1,6 +1,7 @@
 # Diary CLI
 
 一个简单的日记应用命令行工具，参考hexo-cli设计。
+> 请clone本仓库后执行npm link使用
 
 ## 特点
 
@@ -9,11 +10,11 @@
 - 本地预览和静态文件生成
 - 自定义主题
 
-## 安装
+~~安装~~
 
-```bash
-npm install -g diary-cli
-```
+~~```bash~~
+~~npm install -g diary-cli~~
+~~```~~
 
 ## 快速开始
 
