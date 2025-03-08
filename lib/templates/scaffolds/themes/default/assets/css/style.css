@@ -1,0 +1,389 @@
+/* 基础样式 */
+:root {
+  --primary-color: #3b82f6;
+  --primary-color-light: #93c5fd;
+  --text-color: #374151;
+  --text-color-light: #6b7280;
+  --background-color: #ffffff;
+  --background-color-light: #f9fafb;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --max-width: 768px;
+  --radius: 8px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color-light);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-color-light);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* 头部样式 */
+.header {
+  background-color: var(--background-color);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px var(--shadow-color);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.header-inner {
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.site-title a {
+  color: var(--text-color);
+}
+
+.site-subtitle {
+  margin: 0.5rem 0 1.5rem;
+  color: var(--text-color-light);
+  font-size: 1rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.menu-item {
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 主要内容 */
+.main {
+  background-color: var(--background-color);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px var(--shadow-color);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* 日记列表 */
+.diary-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.diary-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* 隐藏不再使用的按钮样式，但保留以便未来可能需要 */
+.new-diary-btn {
+  display: none;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-diary-btn:hover {
+  background-color: var(--primary-color-light);
+}
+
+.diary-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.diary-entry {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diary-entry:hover {
+  transform: translateY(-2px);
+}
+
+.diary-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.diary-meta {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.diary-date {
+  color: var(--text-color-light);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.diary-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.diary-tag {
+  color: var(--primary-color);
+  font-size: 0.875rem;
+}
+
+.entry-title {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+}
+
+.entry-title a {
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+
+.entry-title a:hover {
+  color: var(--primary-color);
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+  font-size: 0.95rem;
+}
+
+.read-more:hover {
+  transform: translateX(3px);
+}
+
+.no-diaries {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text-color-light);
+}
+
+/* 文章页 */
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  color: var(--text-color);
+}
+
+.post-meta {
+  color: var(--text-color-light);
+  font-size: 0.875rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.post-tag {
+  color: var(--primary-color);
+}
+
+.post-content {
+  line-height: 1.8;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin: 2rem 0 1rem;
+  color: var(--text-color);
+}
+
+.post-content a {
+  text-decoration: underline;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+.post-content pre {
+  background-color: var(--background-color-light);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.post-content code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.875em;
+}
+
+.post-content blockquote {
+  border-left: 4px solid var(--primary-color);
+  margin-left: 0;
+  padding-left: 1rem;
+  color: var(--text-color-light);
+}
+
+.post-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-nav-item {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  transition: background-color 0.2s;
+}
+
+.post-nav-item:hover {
+  background-color: var(--background-color-light);
+}
+
+/* 归档页 */
+.archive-title {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.archive-year {
+  margin-bottom: 2rem;
+}
+
+.year-title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.month-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.month-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.month-post {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.post-date {
+  color: var(--text-color-light);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+/* 关于页 */
+.about-title {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.about-content {
+  line-height: 1.8;
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  color: var(--text-color-light);
+  font-size: 0.875rem;
+}
+
+.footer-inner {
+  padding: 1rem 0;
+}
+
+.footer p {
+  margin: 0.25rem 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .header, .main {
+    padding: 1rem;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+  }
+  
+  .post-title {
+    font-size: 1.5rem;
+  }
+} 
